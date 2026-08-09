@@ -54,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
       p.x += p.speedX;
       p.y += p.speedY;
 
-      // wrap around edges
       if (p.x < -5) p.x = canvas.width + 5;
       if (p.x > canvas.width + 5) p.x = -5;
       if (p.y < -5) p.y = canvas.height + 5;
@@ -80,12 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
     mainContent.classList.remove("hidden-start");
     mainContent.classList.add("visible");
 
-    // Start floating messages after a short delay
     setTimeout(() => {
       loadMessages();
     }, 600);
 
-    // Try to play music
     tryPlayMusic();
   });
 
@@ -161,11 +158,26 @@ document.addEventListener("DOMContentLoaded", () => {
       const block = document.createElement("div");
       block.className = "message-block";
 
+      // Top row: date + optional small image
+      const topRow = document.createElement("div");
+      topRow.className = "top-row";
+
       const dateEl = document.createElement("div");
       dateEl.className = "date";
       dateEl.textContent = "date: " + data.date;
+      topRow.appendChild(dateEl);
 
-      // Split line
+      // Optional image (only if provided in JSON)
+      if (data.image) {
+        const img = document.createElement("img");
+        img.className = "card-img";
+        img.src = data.image;
+        img.alt = "";
+        img.loading = "lazy";
+        topRow.appendChild(img);
+      }
+
+      // Full-width divider
       const divider = document.createElement("div");
       divider.className = "divider";
 
@@ -173,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
       textEl.className = "text";
       textEl.textContent = data.message;
 
-      block.appendChild(dateEl);
+      block.appendChild(topRow);
       block.appendChild(divider);
       block.appendChild(textEl);
 
