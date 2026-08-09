@@ -206,7 +206,7 @@ html, body {
 }
 
 .message-block .text {
-  font-family: "Indie Flower", cursive;
+  font-family: "Indie Flower";
   font-size: 1.05rem;
   line-height: 1.35;
   color: #3f3a48;
@@ -293,8 +293,9 @@ html, body {
 }
 
 .modal-message {
-  font-size: 1.12rem;
-  line-height: 1.6;
+  font-family: "Indie Flower";
+  font-size: 1.35rem;
+  line-height: 1.55;
   color: #3f3a48;
 }
 
