@@ -222,7 +222,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(240, 240, 245, 0.4);
+  background: rgba(240, 240, 245, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   opacity: 1;
@@ -240,7 +240,8 @@ html, body {
   max-height: 75vh;
   overflow-y: auto;
   padding: 1.9rem 1.7rem 1.7rem;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.5
+                   62);
   border-radius: 16px;
   border: 1px solid rgba(200, 198, 210, 0.5);
   box-shadow: 0 16px 40px rgba(90, 85, 110, 0.12);
