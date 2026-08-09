@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 3-Month Anniversary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Soft flowing gradient layer -->
+  <div class="gradient-flow"></div>
+
+  <!-- Title -->
+  <header class="header">
+    <h1>Happy 3-Month Anniversary</h1>
+    <p class="subtitle">Click any floating message to read it</p>
+  </header>
+
+  <!-- Container where floating message blocks will be added by JS -->
+  <div id="messages-container"></div>
+
+  <!-- Enlarged view when a message is clicked -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="close-modal" class="close-btn" aria-label="Close">&times;</button>
+      <div class="modal-date" id="modal-date"></div>
+      <div class="modal-message" id="modal-message"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
