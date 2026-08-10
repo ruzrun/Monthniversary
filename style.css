@@ -160,6 +160,8 @@ html, body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 .message-block:hover {
@@ -411,6 +413,11 @@ html, body {
 #spotify-link:hover {
   opacity: 1;
   transform: scale(1.1);
+}
+
+/* Remove blue tap highlight on all clickable things */
+* {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ===== Responsive ===== */
